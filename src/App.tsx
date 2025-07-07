@@ -6,23 +6,23 @@ import Visual from "./components/Visual";
 import Notice from "./components/Notice";
 import Link from "./components/Link";
 import Media from "./components/Media";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import { ThemeProvider } from "@emotion/react";
 import theme from "./styles/theme";
 import GlobalStyles from "./styles/GlobalStyles";
+import Layout from "./components/Layout";
+import { visualData } from "./data/dataes";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Header />
-      <Visual />
-      <Notice />
-      <Programs />
-      <Link />
-      <Media />
-      <Footer />
+      <Layout>
+        <Visual data={visualData} />
+        <Notice />
+        <Programs />
+        <Link />
+        <Media />
+      </Layout>
     </ThemeProvider>
   );
 }

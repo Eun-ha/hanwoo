@@ -1,17 +1,17 @@
 const theme = {
   colors: {
-    primary: "#4f46e5",
-    secondary: "#6366f1",
-    background: "#f9fafb",
-    text: "#111827",
-    dark: {
-      background: "#111827",
-      text: "#f9fafb",
+    point: "#E54A5B",
+    text: "#333",
+    subtext: "#999",
+    background: "#fff",
+    white: {
+      text: "#fff",
     },
   },
   breakpoints: {
     mobile: "768px",
     tablet: "1024px",
+    desktop: "1280px",
   },
 };
 

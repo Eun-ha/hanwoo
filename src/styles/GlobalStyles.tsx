@@ -20,8 +20,9 @@ export default function GlobalStyles() {
           height: 100%;
           background: ${theme.colors.background};
           color: ${theme.colors.text};
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+          font-family: "Pretendard", -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
           transition: background 0.3s ease, color 0.3s ease;
         }
         a {

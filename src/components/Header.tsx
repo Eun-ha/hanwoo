@@ -9,5 +9,5 @@ export default function Header() {
     padding: 10px;
     border-radius: 5px;
   `;
-  return <div css={styles}>Header</div>;
+  return <header css={styles}>Header</header>;
 }

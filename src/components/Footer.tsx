@@ -9,5 +9,5 @@ export default function Footer() {
     padding: 10px;
     border-radius: 5px;
   `;
-  return <div css={styles}>Footer</div>;
+  return <footer css={styles}>Footer</footer>;
 }
