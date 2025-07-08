@@ -10,7 +10,7 @@ import { ThemeProvider } from "@emotion/react";
 import theme from "./styles/theme";
 import GlobalStyles from "./styles/GlobalStyles";
 import Layout from "./components/Layout";
-import { visualData } from "./data/dataes";
+import { visualData } from "./data/data";
 
 function App() {
   return (
