@@ -10,6 +10,7 @@ type VisualProps = {
 
 export default function Visual(props: VisualProps) {
   const { title, date, location } = props.data;
+
   const theme = useTheme();
   const styles = css`
     position: relative;

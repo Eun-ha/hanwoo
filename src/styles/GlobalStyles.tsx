@@ -30,6 +30,12 @@ export default function GlobalStyles() {
           color: inherit;
           text-decoration: none;
         }
+        em {
+          font-style: unset;
+        }
+        li {
+          list-style: none;
+        }
       `}
     />
   );

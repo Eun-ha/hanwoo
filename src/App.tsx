@@ -10,15 +10,15 @@ import { ThemeProvider } from "@emotion/react";
 import theme from "./styles/theme";
 import GlobalStyles from "./styles/GlobalStyles";
 import Layout from "./components/Layout";
-import { visualData } from "./data/data";
+import { AllData } from "./data/data";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Layout>
-        <Visual data={visualData} />
-        <Notice />
+        <Visual data={AllData[0].visual[0]} />
+        <Notice data={AllData[0]} />
         <Programs />
         <Link />
         <Media />
