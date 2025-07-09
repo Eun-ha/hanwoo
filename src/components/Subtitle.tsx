@@ -9,8 +9,14 @@ export default function Subtitle(props: SubtitleProps) {
   const theme = useTheme();
   const styles = css`
     &::after {
+      display: ${props.type === "programs" ? "inline-block" : "none"};
+      content: "";
+      margin-top: 15px;
+      width: 25px;
+      height: 2px;
+      background-color: ${theme.colors.line};
     }
-    margin-bottom: 15px;
+    text-align: ${props.type === "programs" ? "center" : "left"};
     h3 {
       font-size: 24px;
       em {
@@ -26,7 +32,17 @@ export default function Subtitle(props: SubtitleProps) {
     }
 
     @media (min-width: ${theme.breakpoints.desktop}) {
-      width: 202px;
+      &::after {
+        width: 80px;
+        margin-top: 34px;
+      }
+      h3 {
+        font-size: 40px;
+        strong,
+        span {
+          font-size: 50px;
+        }
+      }
     }
   `;
   return (

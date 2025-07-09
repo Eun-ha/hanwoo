@@ -19,7 +19,7 @@ function App() {
       <Layout>
         <Visual data={AllData[0].visual[0]} />
         <Notice data={AllData[0]} />
-        <Programs />
+        <Programs data={AllData[0]} />
         <Link />
         <Media />
       </Layout>

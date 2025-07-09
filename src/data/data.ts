@@ -15,16 +15,18 @@ export type subtitleTypes = {
   title3?: string;
 };
 
+export type programsTypes = {
+  title: string;
+  title2: string;
+  content: string;
+  image: string;
+  url?: string;
+};
 export type AllDataTypes = {
   visual: visualTypes[];
   notice: noticeTypes[];
   subtitle: subtitleTypes[];
-};
-
-export const visualData: visualTypes = {
-  title: "제20회 횡성한우축제",
-  date: "2024.10.2 (수) ~ 10.6 (일)",
-  location: "횡성 섬강 둔치 일원",
+  programs: programsTypes[];
 };
 
 export const AllData: AllDataTypes[] = [
@@ -60,6 +62,67 @@ export const AllData: AllDataTypes[] = [
         date: "2024-06-07",
         content:
           "[공고]제20회 횡성한우축제 운영대행 용역 우선협상대상자 선정결과 공고",
+      },
+    ],
+    programs: [
+      {
+        title: "횡성한우 ",
+        title2: "에코뮤지엄",
+        content:
+          "주제관을 따라 걸으면 횡성한우의 과거, 현재, 미래를 만날 수 있는 지붕없는 박물관",
+        image: "/images/programs/programs.png",
+        url: "www.naver.com",
+      },
+      {
+        title: "횡성한우",
+        title2: "구이난장",
+        content:
+          "최고의 맛 횡성한우를 즐기면서 함께 추억속으로 빠지는 음악여행",
+        image: "/images/programs/programs2.png",
+        url: "www.naver.com",
+      },
+      {
+        title: "횡성한우",
+        title2: "웰니스파티",
+        content: "지역주민과 관광객이 함께하는 참여형 피트니스 파티",
+        image: "/images/programs/programs.png",
+        url: "www.naver.com",
+      },
+      {
+        title: "횡성한우 ",
+        title2: "카우쇼",
+        content: "지역예술가들과 함께하는 횡성한우 공공미술 프로젝트",
+        image: "/images/programs/programs2.png",
+        url: "www.naver.com",
+      },
+      {
+        title: "횡성한우 ",
+        title2: "에코뮤지엄",
+        content:
+          "주제관을 따라 걸으면 횡성한우의 과거, 현재, 미래를 만날 수 있는 지붕없는 박물관",
+        image: "/images/programs/programs.png",
+        url: "www.naver.com",
+      },
+      {
+        title: "횡성한우",
+        title2: "구이난장",
+        content:
+          "최고의 맛 횡성한우를 즐기면서 함께 추억속으로 빠지는 음악여행",
+        image: "/images/programs/programs2.png",
+        url: "www.naver.com",
+      },
+      {
+        title: "횡성한우",
+        title2: "웰니스파티",
+        content: "지역주민과 관광객이 함께하는 참여형 피트니스 파티",
+        image: "/images/programs/programs.png",
+      },
+      {
+        title: "횡성한우 ",
+        title2: "카우쇼",
+        content: "지역예술가들과 함께하는 횡성한우 공공미술 프로젝트",
+        image: "/images/programs/programs2.png",
+        url: "www.naver.com",
       },
     ],
   },

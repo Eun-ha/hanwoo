@@ -12,6 +12,7 @@ export default function NoticeList(props: NoticeListProps) {
   const theme = useTheme();
   const styles = css`
     padding: 20px 28px;
+    margin-top: 15px;
     box-shadow: 3px 3px 10px #00000014;
     border-radius: 15px;
     @media (min-width: ${theme.breakpoints.desktop}) {

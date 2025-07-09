@@ -4,6 +4,7 @@ const theme = {
     text: "#333",
     subtext: "#999",
     background: "#fff",
+    line: "#d4d4d4",
     white: {
       text: "#fff",
     },

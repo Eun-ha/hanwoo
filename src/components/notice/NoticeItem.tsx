@@ -24,6 +24,7 @@ export default function NoticeItem(props: NoticeItemProps) {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: 20px;
       p,
       span {
         display: inline-block;
