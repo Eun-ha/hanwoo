@@ -62,10 +62,10 @@ export default function Visual(props: VisualProps) {
       }
 
       &::after {
-        background: url("/images/pc/characters.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
+        background-image: url("/images/pc/bg-1.png"), url("/images/pc/bg-0.png");
+        background-repeat: no-repeat, no-repeat;
+        background-position: center, center;
+        background-size: cover, cover;
       }
     }
   `;
