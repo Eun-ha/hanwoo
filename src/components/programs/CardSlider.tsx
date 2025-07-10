@@ -30,7 +30,7 @@ export default function CardSlider(props: CardSliderProps) {
       .swiper-button-next,
       .swiper-button-prev {
         display: block;
-        color: #e54a5b;
+        color: ${theme.colors.text};
       }
     }
   `;
@@ -39,9 +39,9 @@ export default function CardSlider(props: CardSliderProps) {
       modules={[Navigation]}
       navigation
       breakpoints={{
-        640: { slidesPerView: 2 },
+        640: { slidesPerView: 3 },
         768: { slidesPerView: 3 },
-        1024: { slidesPerView: 3 },
+        1024: { slidesPerView: 4 },
       }}
       css={swiperStyle}
     >
