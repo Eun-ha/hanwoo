@@ -12,7 +12,7 @@ export default function NoticeItem(props: NoticeItemProps) {
   const styles = css`
     font-size: 15px;
     margin-top: 18px;
-    &:first-child {
+    &:first-of-type {
       margin-top: 0;
     }
     span {

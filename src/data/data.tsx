@@ -1,3 +1,10 @@
+import LinkIcon0 from "../components/svg/LinkIcon0";
+import LinkIcon0Hover from "../components/svg/LinkIcon0Hover";
+import LinkIcon1 from "../components/svg/LinkIcon1";
+import LinkIcon2 from "../components/svg/LinkIcon2";
+import LinkIcon3 from "../components/svg/LinkIcon3";
+import LinkIcon4 from "../components/svg/LinkIcon4";
+
 export type visualTypes = {
   title: string;
   date: string;
@@ -22,11 +29,17 @@ export type programsTypes = {
   image: string;
   url?: string;
 };
+export type linksTypes = {
+  title: string;
+  icon: React.ReactNode;
+  hover?: React.ReactNode;
+};
 export type AllDataTypes = {
   visual: visualTypes[];
   notice: noticeTypes[];
   subtitle: subtitleTypes[];
   programs: programsTypes[];
+  links: linksTypes[];
 };
 
 export const AllData: AllDataTypes[] = [
@@ -123,6 +136,13 @@ export const AllData: AllDataTypes[] = [
         content: "지역예술가들과 함께하는 횡성한우 공공미술 프로젝트",
         image: "/images/programs/programs2.png",
         url: "www.naver.com",
+      },
+    ],
+    links: [
+      {
+        title: "축제소개",
+        icon: <LinkIcon0 />,
+        hover: <LinkIcon0Hover />,
       },
     ],
   },
