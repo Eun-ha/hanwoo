@@ -96,7 +96,7 @@ export default function Card(props: CardProps) {
     }
   `;
   return (
-    <a href={url ? url : ""} css={styles}>
+    <a href={url?.startsWith("http") ? url : `https://${url}`} css={styles}>
       <div>
         <h4>
           <span>{title}</span>

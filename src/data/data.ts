@@ -7,6 +7,7 @@ export type visualTypes = {
 export type noticeTypes = {
   date: string;
   content: string;
+  url: string;
 };
 
 export type subtitleTypes = {
@@ -65,11 +66,13 @@ export const AllData: AllDataTypes[] = [
         date: "2024-06-07",
         content:
           "[공고] 제20회 횡성한우축제 공간조성 및 운영 용역 우선협상자 선정결과 공고",
+        url: "www.naver.com",
       },
       {
         date: "2024-06-07",
         content:
           "[공고]제20회 횡성한우축제 운영대행 용역 우선협상대상자 선정결과 공고",
+        url: "www.naver.com",
       },
     ],
     programs: [
