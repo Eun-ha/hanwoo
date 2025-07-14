@@ -17,8 +17,12 @@ export default function Links(props: LinksProps) {
     background: url("/images/mobile/links-bg.png");
     background-repeat: no-repeat;
     background-position: left top;
-    background-size: contain;
+    background-size: cover;
     @media (min-width: ${theme.breakpoints.desktop}) {
+      background: url("/images/pc/links-bg.png");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: contain;
     }
   `;
   return (

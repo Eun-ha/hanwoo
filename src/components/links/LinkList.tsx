@@ -16,14 +16,21 @@ export default function LinkList(props: LinkListProps) {
     justify-content: center;
     align-items: flex-start;
     padding-top: 79px;
+    max-width: 350px;
+    margin: 0 auto;
 
     @media (min-width: ${theme.breakpoints.desktop}) {
+      max-width: inherit;
+      margin: inherit;
+      padding-top: inherit;
+      flex-wrap: nowrap;
+      align-items: anchor-center;
     }
   `;
   return (
     <ul css={styles}>
       {links.map((item, index) => (
-        <LinkItem data={item} index={index} />
+        <LinkItem data={item} index={index} key={index} />
       ))}
     </ul>
   );

@@ -26,7 +26,7 @@ export type programsTypes = {
 export type linksTypes = {
   title: string;
   icon: string;
-  url?: string;
+  url: string;
 };
 
 export type AllDataTypes = {

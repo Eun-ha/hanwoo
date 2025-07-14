@@ -8,6 +8,8 @@ type LinkIconProps = {
 export default function LinkIcon(props: LinkIconProps) {
   const { title, icon, url } = props.data;
 
+  console.log(url);
+
   const theme = useTheme();
   const styles = css`
     display: inline-block;
@@ -26,8 +28,24 @@ export default function LinkIcon(props: LinkIconProps) {
     span {
       margin-top: 30px;
       display: inline-block;
-      width: 49px;
-      height: 43px;
+      width: ${icon === "intro"
+        ? "49px"
+        : icon === "schedule"
+        ? "43px"
+        : icon === "map"
+        ? "43px"
+        : icon === "location"
+        ? "43px"
+        : "47px"};
+      height: ${icon === "intro"
+        ? "43px"
+        : icon === "schedule"
+        ? "48px"
+        : icon === "map"
+        ? "48px"
+        : icon === "location"
+        ? "38px"
+        : "38px"};
       background-image: url(images/icons/link-${icon}-default.svg);
       background-size: contain;
       background-repeat: no-repeat;
@@ -50,10 +68,37 @@ export default function LinkIcon(props: LinkIconProps) {
     }
 
     @media (min-width: ${theme.breakpoints.desktop}) {
+      width: 246px;
+      height: 246px;
+      span {
+        margin-top: 66px;
+        width: ${icon === "intro"
+          ? "71px"
+          : icon === "schedule"
+          ? "61px"
+          : icon === "map"
+          ? "61px"
+          : icon === "location"
+          ? "61px"
+          : "66px"};
+        height: ${icon === "intro"
+          ? "61px"
+          : icon === "schedule"
+          ? "68px"
+          : icon === "map"
+          ? "68px"
+          : icon === "location"
+          ? "54px"
+          : "54px"};
+      }
+      h4 {
+        margin-top: 24px;
+        font-size: 29px;
+      }
     }
   `;
   return (
-    <a href={url} css={styles}>
+    <a href={url?.startsWith("http") ? url : `https://${url}`} css={styles}>
       <span>{icon}</span>
       <h4>{title}</h4>
     </a>

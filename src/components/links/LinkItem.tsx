@@ -8,9 +8,7 @@ type LinkItemProps = {
   index: number; // Assuming key is passed as a prop for unique identification
 };
 export default function LinkItem(props: LinkItemProps) {
-  const { title, icon } = props.data;
-
-  console.log(props.index);
+  const { title, icon, url } = props.data;
 
   const theme = useTheme();
   const floatUpDown = keyframes`
@@ -50,18 +48,37 @@ export default function LinkItem(props: LinkItemProps) {
         background-color: ${theme.colors.point2};
       }
     }
-    &:nth-child(2n) {
+    &:nth-of-type(2n) {
       margin: 20px 0 0 20px;
     }
     animation: ${floatUpDown} 2s ease-in-out infinite;
     animation-delay: ${delay}s;
 
     @media (min-width: ${theme.breakpoints.desktop}) {
+      &::after {
+        width: 306px;
+        height: 306px;
+      }
+      &:nth-of-type(1) {
+        margin-top: 188px;
+      }
+      &:nth-of-type(2) {
+        margin: 353px 0 0 65px;
+      }
+      &:nth-of-type(3) {
+        margin-top: 35px;
+      }
+      &:nth-of-type(4) {
+        margin: 322px 72px 0 0;
+      }
+      &:nth-of-type(5) {
+        margin-top: 142px;
+      }
     }
   `;
   return (
     <li key={props.index} css={styles(props.index * 0.3)}>
-      <LinkIcon data={{ title, icon }} />
+      <LinkIcon data={{ title, icon, url }} />
     </li>
   );
 }
