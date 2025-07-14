@@ -1,16 +1,16 @@
 import React from "react";
 
 import "./App.css";
-import Programs from "./components/Programs";
-import Visual from "./components/Visual";
-import Notice from "./components/Notice";
-import Media from "./components/Media";
+import Programs from "./ui/components/Programs";
+import Visual from "./ui/components/Visual";
+import Notice from "./ui/components/Notice";
+import Media from "./ui/components/Media";
 import { ThemeProvider } from "@emotion/react";
 import theme from "./styles/theme";
 import GlobalStyles from "./styles/GlobalStyles";
-import Layout from "./components/Layout";
+import Layout from "./ui/components/Layout";
 import { AllData } from "./data/data";
-import Links from "./components/Links";
+import Links from "./ui/components/Links";
 
 function App() {
   return (

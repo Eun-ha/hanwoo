@@ -1,17 +1,9 @@
 /** @jsxImportSource @emotion/react */
-import { css, keyframes, useTheme } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
+import { marquee } from "../../styles/animations";
 
 const VisualText = () => {
   const theme = useTheme();
-
-  const marquee = keyframes`
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-`;
 
   const wrapperStyle = css`
     width: 100%;

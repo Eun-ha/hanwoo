@@ -6,7 +6,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { programsTypes } from "../../data/data";
+import { programsTypes } from "../../../data/data";
 import Card from "./Card";
 
 type CardSliderProps = {

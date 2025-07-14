@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import { linksTypes } from "../data/data";
+import { linksTypes } from "../../data/data";
 import LinkList from "./links/LinkList";
+import LinkCharacters from "../animation/LinkCharacters";
 
 type LinksProps = {
   data: linksTypes[];
@@ -11,6 +12,7 @@ export default function Links(props: LinksProps) {
 
   const theme = useTheme();
   const styles = css`
+    position: relative;
     margin-top: 100px;
     width: 100vw;
     height: 100vh;
@@ -28,6 +30,7 @@ export default function Links(props: LinksProps) {
   return (
     <div css={styles}>
       <LinkList data={links} />
+      <LinkCharacters />
     </div>
   );
 }

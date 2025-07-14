@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import { noticeTypes } from "../../data/data";
+import { noticeTypes } from "../../../data/data";
 import NoticeItem from "./NoticeItem";
 
 type NoticeListProps = {

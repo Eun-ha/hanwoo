@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import { AllDataTypes } from "../data/data";
+import { AllDataTypes } from "../../data/data";
 import Subtitle from "./Subtitle";
 import CardSlider from "./programs/CardSlider";
 

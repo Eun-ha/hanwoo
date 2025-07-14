@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import { visualTypes } from "../data/data";
-import VisualText from "../assets/VisualText";
+import { visualTypes } from "../../data/data";
+import VisualText from "../animation/VisualText";
 import TwinklingStars from "./visual/TwinklingStarts";
 
 type VisualProps = {

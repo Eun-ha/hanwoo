@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import { css, keyframes, useTheme } from "@emotion/react";
-import { linksTypes } from "../../data/data";
+import { css, useTheme } from "@emotion/react";
+import { linksTypes } from "../../../data/data";
 import LinkIcon from "./LinkIcon";
+import { floatUpDown } from "../../../styles/animations";
 
 type LinkItemProps = {
   data: linksTypes;
@@ -11,17 +12,7 @@ export default function LinkItem(props: LinkItemProps) {
   const { title, icon, url } = props.data;
 
   const theme = useTheme();
-  const floatUpDown = keyframes`
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-`;
+
   const styles = (delay: number) => css`
     position: relative;
     display: inline-block;

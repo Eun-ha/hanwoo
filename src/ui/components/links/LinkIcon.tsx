@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import { linksTypes } from "../../data/data";
+import { linksTypes } from "../../../data/data";
 
 type LinkIconProps = {
   data: linksTypes;

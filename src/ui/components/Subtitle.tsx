@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import { subtitleTypes } from "../data/data";
+import { subtitleTypes } from "../../data/data";
 type SubtitleProps = {
   data: subtitleTypes[];
   type: "notice" | "programs" | "media";

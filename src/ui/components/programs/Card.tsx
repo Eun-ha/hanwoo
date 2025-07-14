@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import { programsTypes } from "../../data/data";
+import { programsTypes } from "../../../data/data";
 
 type CardProps = {
   data: programsTypes;
