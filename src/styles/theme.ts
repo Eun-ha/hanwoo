@@ -1,6 +1,7 @@
 const theme = {
   colors: {
     point: "#E54A5B",
+    point2: "#8B2B36",
     text: "#333",
     subtext: "#999",
     background: "#fff",

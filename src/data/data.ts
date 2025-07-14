@@ -1,10 +1,3 @@
-import LinkIcon0 from "../components/svg/LinkIcon0";
-import LinkIcon0Hover from "../components/svg/LinkIcon0Hover";
-import LinkIcon1 from "../components/svg/LinkIcon1";
-import LinkIcon2 from "../components/svg/LinkIcon2";
-import LinkIcon3 from "../components/svg/LinkIcon3";
-import LinkIcon4 from "../components/svg/LinkIcon4";
-
 export type visualTypes = {
   title: string;
   date: string;
@@ -29,11 +22,13 @@ export type programsTypes = {
   image: string;
   url?: string;
 };
+
 export type linksTypes = {
   title: string;
-  icon: React.ReactNode;
-  hover?: React.ReactNode;
+  icon: string;
+  url?: string;
 };
+
 export type AllDataTypes = {
   visual: visualTypes[];
   notice: noticeTypes[];
@@ -141,8 +136,28 @@ export const AllData: AllDataTypes[] = [
     links: [
       {
         title: "축제소개",
-        icon: <LinkIcon0 />,
-        hover: <LinkIcon0Hover />,
+        icon: "intro",
+        url: "www.naver.com",
+      },
+      {
+        title: "축제일정",
+        icon: "schedule",
+        url: "www.naver.com",
+      },
+      {
+        title: "행사장안내",
+        icon: "map",
+        url: "www.naver.com",
+      },
+      {
+        title: "오시는길",
+        icon: "location",
+        url: "www.naver.com",
+      },
+      {
+        title: "한우이야기",
+        icon: "story",
+        url: "www.naver.com",
       },
     ],
   },

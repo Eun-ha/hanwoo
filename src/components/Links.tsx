@@ -17,7 +17,7 @@ export default function Links(props: LinksProps) {
     background: url("/images/mobile/links-bg.png");
     background-repeat: no-repeat;
     background-position: left top;
-    background-size: cover;
+    background-size: contain;
     @media (min-width: ${theme.breakpoints.desktop}) {
     }
   `;

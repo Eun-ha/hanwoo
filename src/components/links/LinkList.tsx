@@ -11,13 +11,19 @@ export default function LinkList(props: LinkListProps) {
 
   const theme = useTheme();
   const styles = css`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 79px;
+
     @media (min-width: ${theme.breakpoints.desktop}) {
     }
   `;
   return (
     <ul css={styles}>
       {links.map((item, index) => (
-        <LinkItem data={item} key={index} />
+        <LinkItem data={item} index={index} />
       ))}
     </ul>
   );
