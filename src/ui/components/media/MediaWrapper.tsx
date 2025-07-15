@@ -33,7 +33,7 @@ export default function MediaWrapper(props: MediaWrapperProps) {
     <div css={styles}>
       <MediaText />
       {media.map((item, index) => (
-        <YouTubeEmbed data={item} />
+        <YouTubeEmbed data={item} key={index} />
       ))}
     </div>
   );

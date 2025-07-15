@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import { linksTypes } from "../../../data/data";
+import { VeilText } from "../../../styles/common";
 
 type LinkIconProps = {
   data: linksTypes;
@@ -47,8 +48,7 @@ export default function LinkIcon(props: LinkIconProps) {
       background-image: url(images/icons/link-${icon}-default.svg);
       background-size: contain;
       background-repeat: no-repeat;
-      text-indent: -9999px;
-      white-space: nowrap;
+      ${VeilText}
     }
     h4 {
       margin-top: 18px;

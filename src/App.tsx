@@ -7,7 +7,7 @@ import Notice from "./ui/components/Notice";
 import Media from "./ui/components/Media";
 import { ThemeProvider } from "@emotion/react";
 import theme from "./styles/theme";
-import GlobalStyles from "./styles/GlobalStyles";
+import GlobalStyles from "./styles/global";
 import Layout from "./ui/components/Layout";
 import { AllData } from "./data/data";
 import Links from "./ui/components/Links";

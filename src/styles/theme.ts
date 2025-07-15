@@ -9,6 +9,9 @@ const theme = {
     white: {
       text: "#fff",
     },
+    block: {
+      background: "#000",
+    },
   },
   breakpoints: {
     mobile: "768px",
