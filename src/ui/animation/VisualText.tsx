@@ -53,7 +53,7 @@ const VisualText = () => {
               id="그룹_10"
               data-name="그룹 10"
               transform="translate(0 0)"
-              clip-path="url(#clip-path)"
+              clipPath="url(#clip-path)"
             >
               <path
                 id="패스_81"
@@ -122,7 +122,7 @@ const VisualText = () => {
               id="그룹_10-2"
               data-name="그룹 10"
               transform="translate(0 0)"
-              clip-path="url(#clip-path)"
+              clipPath="url(#clip-path)"
             >
               <path
                 id="패스_81-2"

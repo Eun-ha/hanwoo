@@ -8,8 +8,6 @@ type LinkIconProps = {
 export default function LinkIcon(props: LinkIconProps) {
   const { title, icon, url } = props.data;
 
-  console.log(url);
-
   const theme = useTheme();
   const styles = css`
     display: inline-block;
