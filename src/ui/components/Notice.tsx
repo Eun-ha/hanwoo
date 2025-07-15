@@ -13,11 +13,13 @@ export default function Notice(props: NoticeProps) {
 
   const theme = useTheme();
   const styles = css`
-    padding: 50px 18px 0;
+    margin-top: 50px;
+    padding: 0 18px;
     @media (min-width: ${theme.breakpoints.desktop}) {
       display: flex;
       align-items: center;
-      padding: 50px 320px 0;
+      margin-top: 20px;
+      padding: 0 320px;
     }
   `;
   return (

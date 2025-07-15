@@ -2,7 +2,7 @@
 import { css, useTheme } from "@emotion/react";
 import { visualTypes } from "../../data/data";
 import VisualText from "../animation/VisualText";
-import TwinklingStars from "./visual/TwinklingStarts";
+import TwinklingStars from "../animation/TwinklingStarts";
 
 type VisualProps = {
   data: visualTypes;

@@ -1,13 +1,29 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
+import { AllDataTypes } from "../../data/data";
+import Subtitle from "./Subtitle";
+import MediaWrapper from "./media/MediaWrapper";
 
-export default function Media() {
+type MediaProps = {
+  data: AllDataTypes;
+};
+
+export default function Media(props: MediaProps) {
+  const subtitle = props.data.subtitle;
+  const media = props.data.media;
+  const theme = useTheme();
   const styles = css`
-    color: red;
-    font-size: 20px;
-    background-color: lightblue;
-    padding: 10px;
-    border-radius: 5px;
+    margin-top: 60px;
+    overflow: hidden;
+
+    @media (min-width: ${theme.breakpoints.desktop}) {
+      margin-top: 106px;
+    }
   `;
-  return <div css={styles}>Media</div>;
+  return (
+    <div css={styles}>
+      <Subtitle data={subtitle} type="media" />
+      <MediaWrapper data={media} />
+    </div>
+  );
 }

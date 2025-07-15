@@ -88,3 +88,9 @@ export const marquee = keyframes`
   transform: translateX(-50%);
 }
 `;
+
+export const twinkle = keyframes`
+  0% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.2; transform: scale(1); }
+`;

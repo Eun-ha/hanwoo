@@ -30,7 +30,7 @@ const VisualText = () => {
         xmlnsXlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 575.316 61.46"
         role="img"
-        aria-labelledby="visualTextTitle"
+        aria-labelledby="visual section title"
       >
         <defs>
           <clipPath id="clip-path">

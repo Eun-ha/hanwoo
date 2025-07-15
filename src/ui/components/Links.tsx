@@ -21,6 +21,7 @@ export default function Links(props: LinksProps) {
     background-position: left top;
     background-size: cover;
     @media (min-width: ${theme.breakpoints.desktop}) {
+      margin-top: 123px;
       background: url("/images/pc/links-bg.png");
       background-repeat: no-repeat;
       background-position: left top;

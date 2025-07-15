@@ -14,10 +14,12 @@ export default function Programs(props: ProgramsProps) {
 
   const theme = useTheme();
   const styles = css`
-    padding: 71px 0 0 0;
+    margin-top: 71px;
 
     @media (min-width: ${theme.breakpoints.desktop}) {
-      padding: 121px 189px 0;
+      margin-top: 121px;
+
+      padding: 0 189px;
     }
   `;
   return (

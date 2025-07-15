@@ -30,12 +30,20 @@ export type linksTypes = {
   url: string;
 };
 
+export type mediaTypes = {
+  videoId: string;
+  title: string;
+  aspectRatio: string; // ex) '16/9', '4/3', '1/1'
+  allowOptions: string;
+};
+
 export type AllDataTypes = {
   visual: visualTypes[];
   notice: noticeTypes[];
   subtitle: subtitleTypes[];
   programs: programsTypes[];
   links: linksTypes[];
+  media: mediaTypes[];
 };
 
 export const AllData: AllDataTypes[] = [
@@ -56,7 +64,7 @@ export const AllData: AllDataTypes[] = [
         title2: "프로그램",
       },
       {
-        title: "온라인으로 만나는 ",
+        title: "온라인으로 만나는",
         title2: "횡성한우축제",
         title3: "미디어",
       },
@@ -161,6 +169,15 @@ export const AllData: AllDataTypes[] = [
         title: "한우이야기",
         icon: "story",
         url: "www.naver.com",
+      },
+    ],
+    media: [
+      {
+        videoId: "x7_JUYp4AW8",
+        title: "횡성한우축제 홍보영상",
+        aspectRatio: "16/9",
+        allowOptions:
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
       },
     ],
   },

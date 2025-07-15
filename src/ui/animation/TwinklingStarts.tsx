@@ -1,15 +1,9 @@
-// components/TwinklingStars.tsx
 /** @jsxImportSource @emotion/react */
-import { css, keyframes } from "@emotion/react";
+import { css } from "@emotion/react";
 import { useMemo } from "react";
+import { twinkle } from "../../styles/animations";
 
 const NUM_STARS = 30;
-
-const twinkle = keyframes`
-  0% { opacity: 0.2; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); }
-  100% { opacity: 0.2; transform: scale(1); }
-`;
 
 const generateStarStyle = () => {
   const size = Math.random() * 5 + 1; // 1~3px

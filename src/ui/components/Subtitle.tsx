@@ -9,18 +9,21 @@ export default function Subtitle(props: SubtitleProps) {
   const theme = useTheme();
   const styles = css`
     &::after {
-      display: ${props.type === "programs" ? "inline-block" : "none"};
+      display: ${props.type !== "notice" ? "inline-block" : "none"};
       content: "";
       margin-top: 15px;
       width: 25px;
       height: 2px;
       background-color: ${theme.colors.line};
     }
-    text-align: ${props.type === "programs" ? "center" : "left"};
+    text-align: ${props.type !== "notice" ? "center" : "left"};
     h3 {
       font-size: 24px;
       em {
         color: ${theme.colors.point};
+      }
+      p {
+        font-weight: normal;
       }
       strong,
       span {
@@ -64,7 +67,7 @@ export default function Subtitle(props: SubtitleProps) {
       ) : (
         <>
           <h3>
-            {props.data[2].title}
+            <p>{props.data[2].title}</p>
             <span>{props.data[2].title2}</span>
             <strong>{props.data[2].title3}</strong>
           </h3>

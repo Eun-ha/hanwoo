@@ -21,7 +21,7 @@ function App() {
         <Notice data={AllData[0]} />
         <Programs data={AllData[0]} />
         <Links data={AllData[0].links} />
-        <Media />
+        <Media data={AllData[0]} />
       </Layout>
     </ThemeProvider>
   );
