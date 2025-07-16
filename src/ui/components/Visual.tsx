@@ -62,6 +62,7 @@ export default function Visual(props: VisualProps) {
       }
 
       &::after {
+        display: none;
         background-image: url("/images/pc/bg-1.png"), url("/images/pc/bg-0.png");
         background-repeat: no-repeat, no-repeat;
         background-position: center, center;

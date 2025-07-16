@@ -1,17 +1,75 @@
 /** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
-
+import { css, useTheme } from "@emotion/react";
+import CnbList from "./header/CnbList";
+import { VeilText } from "../../styles/common";
+import { useState } from "react";
 export default function Header() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const theme = useTheme();
+  const btnUrl = isHovered
+    ? "images/header/open-button-on.svg"
+    : "images/header/open-button.svg";
+
+  const logoUrl = isHovered
+    ? "images/header/logo-on.svg"
+    : "images/header/logo.svg";
+
   const styles = css`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 5% 0;
     position: absolute;
-    top: 0;
     left: 0;
+    top: 0;
     width: 100%;
-    color: red;
-    font-size: 20px;
-    background-color: lightblue;
-    padding: 10px;
-    border-radius: 5px;
+    z-index: 10;
+    background-color: ${isHovered
+      ? `${theme.colors.background}`
+      : "transparent"};
+    h1 {
+      width: 52px;
+      height: 33px;
+      background: url(${logoUrl});
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+      ${VeilText}
+    }
+    button {
+      width: 24px;
+      height: 24px;
+      background: url(${btnUrl});
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+      ${VeilText}
+    }
+    @media (min-width: ${theme.breakpoints.desktop}) {
+      align-items: flex-start;
+      padding: 0 5% 0;
+      h1 {
+        margin: 20px 0;
+        width: 120px;
+        height: 75px;
+      }
+      button {
+        margin: 40px 0;
+        width: 28px;
+        height: 28px;
+      }
+    }
   `;
-  return <header css={styles}>Header</header>;
+
+  return (
+    <header css={styles}>
+      <h1>logo</h1>
+      <CnbList
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
+      />
+      <button type="button">메뉴</button>
+    </header>
+  );
 }

@@ -36,6 +36,9 @@ export default function GlobalStyles() {
         li {
           list-style: none;
         }
+        button {
+          all: unset;
+        }
       `}
     />
   );
