@@ -6,12 +6,14 @@ import Cnb from "./header/Cnb";
 import Navigation from "./header/Navigation";
 export default function Header() {
   const [isHovered, setIsHovered] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const theme = useTheme();
-  const btnUrl = isHovered
+  const btnUrl = isOpen
+    ? "images/header/close-button.svg"
+    : isHovered
     ? "images/header/open-button-on.svg"
     : "images/header/open-button.svg";
-
   const logoUrl = isHovered
     ? "images/header/logo-on.svg"
     : "images/header/logo.svg";
@@ -71,10 +73,11 @@ export default function Header() {
           onHoverStart={() => setIsHovered(true)}
           onHoverEnd={() => setIsHovered(false)}
         />
-        <button type="button">메뉴</button>
+        <button type="button" onClick={() => setIsOpen(!isOpen)}>
+          메뉴
+        </button>
       </div>
-
-      <Navigation />
+      <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>
   );
 }
