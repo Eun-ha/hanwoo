@@ -25,6 +25,7 @@ export default function GlobalStyles() {
             "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
             "Helvetica Neue", sans-serif;
           transition: background 0.3s ease, color 0.3s ease;
+          overflow-x: hidden;
         }
         a {
           color: inherit;

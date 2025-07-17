@@ -1,12 +1,24 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import { VeilText } from "../../styles/common";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cnb from "./header/Cnb";
 import Navigation from "./header/Navigation";
 export default function Header() {
   const [isHovered, setIsHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   const theme = useTheme();
   const btnUrl = isOpen
