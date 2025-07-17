@@ -2,15 +2,19 @@
 import { css, useTheme } from "@emotion/react";
 import { CnbData } from "../../../data/cnb";
 import { useState } from "react";
+import useIsMobile from "../../../hooks/useIsMobile";
 
 export default function Navigation() {
+  const theme = useTheme();
+
+  const isMobile = useIsMobile();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const handleClick = (index: number) => {
+  const handleToggle = (index: number) => {
+    if (!isMobile) return;
     setOpenIndex((prev) => (prev === index ? null : index));
   };
 
-  const theme = useTheme();
   const styles = css`
     padding: 20% 5% 0;
     position: absolute;
@@ -21,53 +25,133 @@ export default function Navigation() {
     color: ${theme.colors.white.text};
     z-index: 2;
     background-color: ${theme.colors.text};
+
     h2 {
       padding-bottom: 15px;
-      margin: 15px 0;
+      margin: 0 0 15px 0;
       border-bottom: 1px solid ${theme.colors.white.text};
+      cursor: pointer;
     }
     ul {
-      padding: 3%;
+      margin: 15px 0;
+      padding: 0 15px;
       li {
-        padding-top: 2%;
+        position: relative;
+        padding-top: 3%;
         &:nth-of-type(1) {
           padding-top: 0;
         }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: 15px;
+          width: 19px;
+          background: url("/images/header/menu-arrow.svg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.4s ease;
+        }
+        &:hover {
+          font-weight: bold;
+          &::after {
+            transform: scaleX(1);
+          }
+        }
       }
     }
+
     @media (min-width: ${theme.breakpoints.desktop}) {
+      display: flex;
+      justify-content: space-around;
+      z-index: 11;
+      padding: 0;
+      color: ${theme.colors.text};
+      background-color: ${theme.colors.background};
+      h2 {
+        position: relative;
+        font-size: 30px;
+        border-bottom: none;
+        margin: 25px 0;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 1px;
+          width: 100%;
+          background-color: ${theme.colors.white.text};
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.5s ease;
+        }
+      }
+      ul {
+        padding: 0;
+        li {
+          padding-top: 10%;
+          a {
+            font-size: 23px;
+          }
+        }
+      }
+      .wrapper {
+        flex: 1;
+        padding: 18% 4% 0;
+        border-left: 1px solid #8c8a8a1c;
+        cursor: pointer;
+        &:hover {
+          color: ${theme.colors.white.text};
+          background-color: ${theme.colors.point};
+          transition: background-color 0.5s ease;
+          h2:after {
+            transform: scaleX(1);
+          }
+        }
+      }
     }
   `;
+
+  const ulStyle = (isOpen: boolean) => css`
+    overflow: hidden;
+    transition: max-height 0.1s ease;
+    ${isMobile && `max-height: ${isOpen ? "1000px" : "0"};`}
+    ${!isMobile && `max-height: none;`}
+  `;
+
   return (
-    <>
-      {CnbData.map((item, index) => (
-        <div css={styles} key={index}>
-          {item.cnb.map((section, sectionIndex) => (
-            <div className="wrapper" key={sectionIndex}>
-              <h2>
-                <button onClick={() => handleClick(sectionIndex)}>
-                  {section.title}
-                </button>
+    <div css={styles}>
+      {CnbData.map((item, index) =>
+        item.cnb.map((section, sectionIndex) => {
+          const globalIndex = index * 10 + sectionIndex;
+          const isOpen = isMobile ? openIndex === globalIndex : true;
+
+          return (
+            <div className="wrapper" key={globalIndex}>
+              <h2 onClick={() => handleToggle(globalIndex)}>
+                <span>{section.title}</span>
               </h2>
-              {openIndex === sectionIndex && (
-                <ul>
-                  {section.deps.map((dep, depIndex) => (
-                    <li key={depIndex}>
-                      <a
-                        href={section.links[depIndex]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <span>{dep}</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <ul css={ulStyle(isOpen)}>
+                {section.deps.map((dep, depIndex) => (
+                  <li key={depIndex}>
+                    <a
+                      href={section.links[depIndex]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span>{dep}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
-        </div>
-      ))}
-    </>
+          );
+        })
+      )}
+    </div>
   );
 }
