@@ -3,6 +3,7 @@ import { css, useTheme } from "@emotion/react";
 import { visualTypes } from "../../data/data";
 import VisualText from "../animation/VisualText";
 import TwinklingStars from "../animation/TwinklingStarts";
+import { motion } from "framer-motion";
 
 type VisualProps = {
   data: visualTypes;
@@ -74,11 +75,21 @@ export default function Visual(props: VisualProps) {
   return (
     <div css={styles}>
       <TwinklingStars />
-      <h2>{title}</h2>
-      <p>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        {title}
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8 }}
+      >
         {date}
         {location}
-      </p>
+      </motion.p>
       <VisualText />
     </div>
   );

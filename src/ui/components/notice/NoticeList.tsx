@@ -20,6 +20,7 @@ export default function NoticeList(props: NoticeListProps) {
       padding: 20px 70px;
     }
   `;
+
   return (
     <ul css={styles}>
       {notice.map((item, index) => (
