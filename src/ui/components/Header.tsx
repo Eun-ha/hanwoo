@@ -1,8 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
-import CnbList from "./header/CnbList";
 import { VeilText } from "../../styles/common";
 import { useState } from "react";
+import Cnb from "./header/Cnb";
+import Navigation from "./header/Navigation";
 export default function Header() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -63,13 +64,17 @@ export default function Header() {
   `;
 
   return (
-    <header css={styles}>
-      <h1>logo</h1>
-      <CnbList
-        onHoverStart={() => setIsHovered(true)}
-        onHoverEnd={() => setIsHovered(false)}
-      />
-      <button type="button">메뉴</button>
+    <header>
+      <div css={styles}>
+        <h1>logo</h1>
+        <Cnb
+          onHoverStart={() => setIsHovered(true)}
+          onHoverEnd={() => setIsHovered(false)}
+        />
+        <button type="button">메뉴</button>
+      </div>
+
+      <Navigation />
     </header>
   );
 }

@@ -38,6 +38,7 @@ export default function GlobalStyles() {
         }
         button {
           all: unset;
+          cursor: pointer;
         }
       `}
     />

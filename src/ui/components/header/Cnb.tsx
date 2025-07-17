@@ -5,7 +5,7 @@ type ChildProps = {
   onHoverStart: () => void;
   onHoverEnd: () => void;
 };
-export default function CnbList({ onHoverStart, onHoverEnd }: ChildProps) {
+export default function Cnb({ onHoverStart, onHoverEnd }: ChildProps) {
   const theme = useTheme();
   const styles = css`
     display: none;
