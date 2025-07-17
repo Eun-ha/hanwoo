@@ -26,7 +26,7 @@ export default function Notice(props: NoticeProps) {
   `;
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { margin: "-10% 0px" });
+  const isInView = useInView(ref, { once: true, margin: "-10% 0px" });
   return (
     <motion.div
       ref={ref}
