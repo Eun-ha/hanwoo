@@ -41,6 +41,9 @@ export default function GlobalStyles() {
           all: unset;
           cursor: pointer;
         }
+        .swiper {
+          position: initial;
+        }
       `}
     />
   );

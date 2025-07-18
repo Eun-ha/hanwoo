@@ -77,7 +77,7 @@ export default function Card(props: CardProps) {
       font-size: 14px;
     }
 
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.tablet}) {
       padding: 235px 51px 0;
       width: 360px;
       height: 503px;

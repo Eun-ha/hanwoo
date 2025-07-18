@@ -17,7 +17,7 @@ const MediaText = () => {
     width: 200%;
     height: 259.91px;
 
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.tablet}) {
       height: 831px;
     }
   `;

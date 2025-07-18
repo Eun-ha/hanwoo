@@ -17,7 +17,7 @@ const VisualText = () => {
     width: 200%; // 두 세트의 텍스트 길이를 커버
     height: 61.46px; // SVG의 높이와 일치
 
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.tablet}) {
       height: 198.33px;
     }
   `;

@@ -15,11 +15,10 @@ export default function Programs(props: ProgramsProps) {
   const theme = useTheme();
   const styles = css`
     margin-top: 71px;
-
-    @media (min-width: ${theme.breakpoints.desktop}) {
-      margin-top: 121px;
-
-      padding: 0 189px;
+    @media (min-width: ${theme.breakpoints.tablet}) {
+      position: relative;
+      max-width: 1542px;
+      margin: 121px auto 0;
     }
   `;
   return (
