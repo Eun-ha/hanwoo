@@ -18,6 +18,8 @@ export default function LinkIcon(props: LinkIconProps) {
     transform: translate(-50%, -50%);
     width: 146px;
     height: 146px;
+    //width: 39%;
+    //height: 39%;
     background-color: ${theme.colors.background};
     border: 1px solid ${theme.colors.white.text};
     border-radius: 100%;
@@ -65,7 +67,7 @@ export default function LinkIcon(props: LinkIconProps) {
       }
     }
 
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.mini}) {
       width: 246px;
       height: 246px;
       span {

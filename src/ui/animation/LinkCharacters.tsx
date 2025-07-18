@@ -10,8 +10,8 @@ const LinkCharacters = () => {
       mHeight: 47.7,
       width: 104.573,
       height: 84.821,
-      marginL: -160,
-      marginT: 200,
+      marginL: -590,
+      marginT: 250,
       duration: 3,
     },
     {
@@ -20,8 +20,8 @@ const LinkCharacters = () => {
       mHeight: 17.74,
       width: 20,
       height: 31.54,
-      marginL: -130,
-      marginT: 170,
+      marginL: -530,
+      marginT: 200,
       duration: 4,
     },
     {
@@ -30,8 +30,8 @@ const LinkCharacters = () => {
       mHeight: 63.79,
       width: 106.85,
       height: 113.44,
-      marginL: 40,
-      marginT: -460,
+      marginL: 190,
+      marginT: -288,
       duration: 2,
     },
     {
@@ -40,7 +40,7 @@ const LinkCharacters = () => {
       mHeight: 46.13,
       width: 37.64,
       height: 82.03,
-      marginL: 120,
+      marginL: -20,
       marginT: 200,
       duration: 1,
     },
@@ -50,8 +50,8 @@ const LinkCharacters = () => {
       mHeight: 13.19,
       width: 25.52,
       height: 29.82,
-      marginL: 0,
-      marginT: -410,
+      marginL: 150,
+      marginT: -270,
       duration: 2.5,
     },
     {
@@ -60,8 +60,8 @@ const LinkCharacters = () => {
       mHeight: 17.74,
       width: 26.2,
       height: 41.31,
-      marginL: 120,
-      marginT: -390,
+      marginL: 315,
+      marginT: -250,
       duration: 2.5,
     },
   ];
@@ -102,7 +102,7 @@ const LinkCharacters = () => {
     animation: ${name !== "character04" ? rotate : floatUpDown} ${duration}s
       linear infinite;
 
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.tablet}) {
       width: ${typeof width === "number" ? `${width}px` : width};
       height: ${typeof height === "number" ? `${height}px` : height};
     }

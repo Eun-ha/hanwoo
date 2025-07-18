@@ -6,7 +6,7 @@ import { floatUpDown } from "../../../styles/animations";
 
 type LinkItemProps = {
   data: linksTypes;
-  index: number; // Assuming key is passed as a prop for unique identification
+  index: number;
 };
 export default function LinkItem(props: LinkItemProps) {
   const { title, icon, url } = props.data;
@@ -16,11 +16,15 @@ export default function LinkItem(props: LinkItemProps) {
   const styles = (delay: number) => css`
     position: relative;
     display: inline-block;
+    //width: 42.67%;
+    //height: 42.67%;
     &::after {
       display: block;
       content: "";
       width: 160px;
       height: 160px;
+      //width: 42.67%;
+      //height: 42.67%;
       background-color: ${theme.colors.background};
       opacity: 0.2;
       border-radius: 100%;
@@ -40,10 +44,32 @@ export default function LinkItem(props: LinkItemProps) {
       }
     }
     &:nth-of-type(2n) {
-      margin: 20px 0 0 20px;
+      //margin: 20px 0 0 20px;
     }
     animation: ${floatUpDown} 2s ease-in-out infinite;
     animation-delay: ${delay}s;
+
+    @media (min-width: ${theme.breakpoints.mini}) {
+      &::after {
+        width: 306px;
+        height: 306px;
+      }
+      &:nth-of-type(1) {
+        //margin-top: 188px;
+      }
+      &:nth-of-type(2) {
+        // margin: 353px 0 0 65px;
+      }
+      &:nth-of-type(3) {
+        //margin-top: 35px;
+      }
+      &:nth-of-type(4) {
+        //margin: 322px 72px 0 0;
+      }
+      &:nth-of-type(5) {
+        //margin-top: 142px;
+      }
+    }
 
     @media (min-width: ${theme.breakpoints.desktop}) {
       &::after {
@@ -51,19 +77,19 @@ export default function LinkItem(props: LinkItemProps) {
         height: 306px;
       }
       &:nth-of-type(1) {
-        margin-top: 188px;
+        margin-top: 238px;
       }
       &:nth-of-type(2) {
-        margin: 353px 0 0 65px;
+        margin: 403px 0 0 65px;
       }
       &:nth-of-type(3) {
-        margin-top: 35px;
+        margin-top: 85px;
       }
       &:nth-of-type(4) {
-        margin: 322px 72px 0 0;
+        margin: 372px 72px 0 0;
       }
       &:nth-of-type(5) {
-        margin-top: 142px;
+        margin-top: 192px;
       }
     }
   `;

@@ -14,18 +14,18 @@ export default function Links(props: LinksProps) {
   const styles = css`
     position: relative;
     margin-top: 100px;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: url("/images/mobile/links-bg.png");
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: top center;
     background-size: cover;
-    @media (min-width: ${theme.breakpoints.desktop}) {
-      margin-top: 123px;
+    @media (min-width: ${theme.breakpoints.mini}) {
+      margin: 123px 0 200px;
       background: url("/images/pc/links-bg.png");
       background-repeat: no-repeat;
-      background-position: left top;
-      background-size: contain;
+      background-position: top center;
+      background-size: cover;
     }
   `;
   return (
