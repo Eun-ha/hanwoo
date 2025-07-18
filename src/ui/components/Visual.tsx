@@ -21,8 +21,8 @@ export default function Visual(props: VisualProps) {
     text-align: center;
 
     background: url("/images/mobile/visual-bg.png");
-    background-repeat: no-repeat;
     background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
 
     &::after {
@@ -34,8 +34,8 @@ export default function Visual(props: VisualProps) {
       width: 100%;
       height: 100%;
       background: url("/images/mobile/characters.png");
-      background-repeat: no-repeat;
       background-position: center center;
+      background-repeat: no-repeat;
       background-size: cover;
     }
     h2 {
@@ -47,7 +47,7 @@ export default function Visual(props: VisualProps) {
       font-size: 16px;
     }
 
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.tablet}) {
       background: url("/images/pc/visual-bg.png");
       background-repeat: no-repeat;
       background-position: center center;
@@ -61,13 +61,26 @@ export default function Visual(props: VisualProps) {
         padding-top: 13px;
         font-size: 30px;
       }
-
       &::after {
-        display: none;
-        background-image: url("/images/pc/bg-1.png"), url("/images/pc/bg-0.png");
-        background-repeat: no-repeat, no-repeat;
-        background-position: center, center;
-        background-size: cover, cover;
+        background: url("/images/pc/characters.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: contain;
+      }
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 12vh;
+        background: ${theme.colors.white.text};
+      }
+      @media (min-width: ${theme.breakpoints.desktop}) {
+        &::before {
+          height: 18.5vh;
+        }
       }
     }
   `;
