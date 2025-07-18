@@ -15,7 +15,7 @@ export default function NoticeList(props: NoticeListProps) {
     margin-top: 15px;
     box-shadow: 3px 3px 10px #00000014;
     border-radius: 15px;
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.tablet}) {
       flex-grow: 1;
       padding: 20px 70px;
     }

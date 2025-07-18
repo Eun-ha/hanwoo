@@ -34,7 +34,7 @@ export default function Subtitle(props: SubtitleProps) {
       }
     }
 
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.tablet}) {
       width: ${props.type === "notice" ? "202px" : "auto"};
       &::after {
         width: 80px;

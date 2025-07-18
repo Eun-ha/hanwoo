@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import { noticeTypes } from "../../../data/data";
+import { ellipsis } from "../../../styles/common";
 
 type NoticeItemProps = {
   data: noticeTypes;
@@ -21,17 +22,23 @@ export default function NoticeItem(props: NoticeItemProps) {
       margin-top: 8px;
       color: ${theme.colors.subtext};
     }
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.tablet}) {
       a {
         display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 20px;
       }
+      p {
+        flex-grow: 1;
+        ${ellipsis}
+      }
       p,
       span {
         display: inline-block;
         margin-top: 0;
+        flex-shrink: 0;
+        width: 113px;
       }
     }
   `;

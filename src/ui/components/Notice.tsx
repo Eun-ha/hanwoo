@@ -17,11 +17,11 @@ export default function Notice(props: NoticeProps) {
   const styles = css`
     margin-top: 50px;
     padding: 0 18px;
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.tablet}) {
       display: flex;
       align-items: center;
-      margin-top: 20px;
-      padding: 0 320px;
+      max-width: 1280px;
+      margin: 20px auto 0;
     }
   `;
 
