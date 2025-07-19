@@ -3,6 +3,7 @@ import { css, useTheme } from "@emotion/react";
 import { linksTypes } from "../../data/data";
 import LinkList from "./links/LinkList";
 import LinkCharacters from "../animation/LinkCharacters";
+import { coverBg } from "../../styles/common";
 
 type LinksProps = {
   data: linksTypes[];
@@ -16,16 +17,9 @@ export default function Links(props: LinksProps) {
     margin-top: 100px;
     overflow: hidden;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     &::before {
-      display: block;
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      ${coverBg}
       background: url("/images/mobile/links-bg.png");
       background-repeat: no-repeat;
       background-position: center center;
@@ -33,11 +27,11 @@ export default function Links(props: LinksProps) {
     }
 
     @media (min-width: ${theme.breakpoints.desktop}) {
-      margin: 123px 0 200px;
+      margin-top: 123px;
       &::before {
         background: url("/images/pc/links-bg.png");
         background-repeat: no-repeat;
-        background-position: center center;
+        background-position: center top;
         background-size: contain;
       }
     }

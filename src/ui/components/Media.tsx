@@ -11,13 +11,14 @@ type MediaProps = {
 export default function Media(props: MediaProps) {
   const subtitle = props.data.subtitle;
   const media = props.data.media;
+
   const theme = useTheme();
   const styles = css`
     margin-top: 60px;
     overflow: hidden;
 
     @media (min-width: ${theme.breakpoints.tablet}) {
-      margin: 106px 0 0 0;
+      margin-top: 106px;
     }
   `;
   return (
