@@ -34,11 +34,17 @@ export default function Footer() {
       justify-content: space-between;
       padding-top: 20px;
     }
+    .address {
+      flex-shrink: 1;
+    }
     .social {
+      min-width: 58px;
       a {
         ${VeilText}
         display: inline-block;
+        margin-left: 15px;
         &:nth-of-type(1) {
+          margin-left: 0;
           width: 20px;
           height: 20px;
           background: url("/images/footer/instagram.svg");
@@ -83,7 +89,7 @@ export default function Footer() {
     <footer css={styles}>
       <h4>{organizationName}</h4>
       <div className="info">
-        <div>
+        <div className="address">
           <h5>{organizationName}</h5>
           <p>
             <span>대표자: {representativeName}</span>

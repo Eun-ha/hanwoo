@@ -60,7 +60,7 @@ export default function Subtitle(props: SubtitleProps) {
       ) : props.type === "programs" ? (
         <>
           <h3>
-            <span>{props.data[1].title}</span>
+            <span>{props.data[1].title}&nbsp;</span>
             <strong>{props.data[1].title2}</strong>
           </h3>
         </>
@@ -68,7 +68,7 @@ export default function Subtitle(props: SubtitleProps) {
         <>
           <h3>
             <p>{props.data[2].title}</p>
-            <span>{props.data[2].title2}</span>
+            <span>{props.data[2].title2}&nbsp;</span>
             <strong>{props.data[2].title3}</strong>
           </h3>
         </>
