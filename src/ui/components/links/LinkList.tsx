@@ -24,7 +24,7 @@ export default function LinkList(props: LinkListProps) {
     @media (min-width: ${theme.breakpoints.desktop}) {
       max-width: inherit;
       margin: inherit;
-      //padding-top: 79px;
+      padding-top: 0;
       flex-wrap: nowrap;
       align-items: anchor-center;
     }

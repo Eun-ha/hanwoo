@@ -16,15 +16,12 @@ export default function LinkItem(props: LinkItemProps) {
   const styles = (delay: number) => css`
     position: relative;
     display: inline-block;
-    //width: 42.67%;
-    //height: 42.67%;
+    margin-top: 3%;
     &::after {
       display: block;
       content: "";
       width: 160px;
       height: 160px;
-      //width: 42.67%;
-      //height: 42.67%;
       background-color: ${theme.colors.background};
       opacity: 0.2;
       border-radius: 100%;
@@ -34,7 +31,6 @@ export default function LinkItem(props: LinkItemProps) {
         color: ${theme.colors.white.text};
         background-color: ${theme.colors.point};
       }
-
       span {
         background-image: url(images/icons/link-${icon}-hover.svg);
         color: ${theme.colors.white.text};
@@ -43,13 +39,11 @@ export default function LinkItem(props: LinkItemProps) {
         background-color: ${theme.colors.point2};
       }
     }
-    &:nth-of-type(2n) {
-      //margin: 20px 0 0 20px;
-    }
     animation: ${floatUpDown} 2s ease-in-out infinite;
     animation-delay: ${delay}s;
 
     @media (min-width: ${theme.breakpoints.mini}) {
+      margin-top: 0;
       &::after {
         width: 306px;
         height: 306px;

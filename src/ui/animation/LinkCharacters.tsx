@@ -22,10 +22,10 @@ const LinkCharacters = () => {
       mHeight: 17.74,
       width: 20,
       height: 31.54,
-      left: 9,
+      left: 15,
       right: "inherit",
       top: "inherit",
-      bottom: 20,
+      bottom: 24,
       duration: 4,
     },
     {
