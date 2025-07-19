@@ -21,7 +21,7 @@ export default function MediaWrapper(props: MediaWrapperProps) {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.mini}) {
       margin-top: 56px;
       background: url("/images/pc/media-bg.png");
       background-repeat: no-repeat;

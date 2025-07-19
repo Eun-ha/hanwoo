@@ -19,7 +19,7 @@ const YouTubeEmbed = (props: YouTubeEmbedProps) => {
     aspect-ratio: ${aspectRatio};
     overflow: hidden;
     border-radius: 15px;
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.tablet}) {
       width: 70.94%;
     }
   `;

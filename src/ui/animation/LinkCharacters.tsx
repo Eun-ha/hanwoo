@@ -10,8 +10,10 @@ const LinkCharacters = () => {
       mHeight: 47.7,
       width: 104.573,
       height: 84.821,
-      marginL: -590,
-      marginT: 250,
+      left: 5,
+      right: "inherit",
+      top: "inherit",
+      bottom: 15,
       duration: 3,
     },
     {
@@ -20,8 +22,10 @@ const LinkCharacters = () => {
       mHeight: 17.74,
       width: 20,
       height: 31.54,
-      marginL: -530,
-      marginT: 200,
+      left: 9,
+      right: "inherit",
+      top: "inherit",
+      bottom: 20,
       duration: 4,
     },
     {
@@ -30,8 +34,10 @@ const LinkCharacters = () => {
       mHeight: 63.79,
       width: 106.85,
       height: 113.44,
-      marginL: 190,
-      marginT: -288,
+      left: "inherit",
+      right: 20,
+      top: 0,
+      bottom: "inherit",
       duration: 2,
     },
     {
@@ -40,8 +46,10 @@ const LinkCharacters = () => {
       mHeight: 46.13,
       width: 37.64,
       height: 82.03,
-      marginL: -20,
-      marginT: 200,
+      left: "inherit",
+      right: 10,
+      top: "inherit",
+      bottom: 15,
       duration: 1,
     },
     {
@@ -50,8 +58,10 @@ const LinkCharacters = () => {
       mHeight: 13.19,
       width: 25.52,
       height: 29.82,
-      marginL: 150,
-      marginT: -270,
+      left: "inherit",
+      right: 40,
+      top: 5,
+      bottom: "inherit",
       duration: 2.5,
     },
     {
@@ -60,8 +70,10 @@ const LinkCharacters = () => {
       mHeight: 17.74,
       width: 26.2,
       height: 41.31,
-      marginL: 315,
-      marginT: -250,
+      left: "inherit",
+      right: 12,
+      top: 7,
+      bottom: "inherit",
       duration: 2.5,
     },
   ];
@@ -74,8 +86,10 @@ const LinkCharacters = () => {
     mHeight,
     width,
     height,
-    marginL = 0,
-    marginT = 0,
+    left = "auto",
+    right = "auto",
+    top = "auto",
+    bottom = "auto",
     duration,
   }: {
     name: string;
@@ -83,16 +97,18 @@ const LinkCharacters = () => {
     mHeight: number | string;
     width: number | string;
     height: number | string;
-    marginL: number | string;
-    marginT: number | string;
+    left: number | string;
+    right: number | string;
+    top: number | string;
+    bottom: number | string;
     duration: number;
   }) => css`
     display: block;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: ${marginL}px;
-    margin-top: ${marginT}px;
+    left: ${left}%;
+    right: ${right}%;
+    top: ${top}%;
+    bottom: ${bottom}%;
     width: ${typeof mWidth === "number" ? `${mWidth}px` : mWidth};
     height: ${typeof mHeight === "number" ? `${mHeight}px` : mHeight};
     background: url("/images/links/${name}.png");

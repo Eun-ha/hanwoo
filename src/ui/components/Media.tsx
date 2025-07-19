@@ -16,8 +16,8 @@ export default function Media(props: MediaProps) {
     margin-top: 60px;
     overflow: hidden;
 
-    @media (min-width: ${theme.breakpoints.desktop}) {
-      margin-top: 106px;
+    @media (min-width: ${theme.breakpoints.tablet}) {
+      margin: 106px 0 0 0;
     }
   `;
   return (
