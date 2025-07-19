@@ -11,16 +11,14 @@ const YouTubeEmbed = (props: YouTubeEmbedProps) => {
 
   const theme = useTheme();
   const containerStyle = css`
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
+    margin: 0 4.8% 10%;
+    position: relative;
     aspect-ratio: ${aspectRatio};
     overflow: hidden;
     border-radius: 15px;
-    @media (min-width: ${theme.breakpoints.tablet}) {
-      width: 70.94%;
+    max-width: 1362px;
+    @media (min-width: ${theme.breakpoints.desktop}) {
+      margin: 0 auto 10%;
     }
   `;
 

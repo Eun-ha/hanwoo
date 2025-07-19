@@ -14,10 +14,12 @@ export default function MediaWrapper(props: MediaWrapperProps) {
   const theme = useTheme();
 
   const styles = css`
-    margin-top: 25px;
-    padding-bottom: 161px;
+    //padding-bottom: 161px;
+    width: 100%;
+    height: 100%;
     position: relative;
     overflow: hidden;
+    margin-top: 25px;
     &::before {
       ${coverBg};
       background: url("/images/mobile/media-bg.png");
@@ -27,7 +29,7 @@ export default function MediaWrapper(props: MediaWrapperProps) {
     }
 
     @media (min-width: ${theme.breakpoints.mini}) {
-      //margin-top: 56px;
+      margin-top: 56px;
       &::before {
         background: url("/images/pc/media-bg.png");
         background-repeat: no-repeat;

@@ -32,7 +32,7 @@ export default function Links(props: LinksProps) {
         background: url("/images/pc/links-bg.png");
         background-repeat: no-repeat;
         background-position: center top;
-        background-size: contain;
+        background-size: 100% 100%;
       }
     }
   `;
