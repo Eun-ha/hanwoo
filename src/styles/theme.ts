@@ -15,7 +15,7 @@ const theme = {
   },
   breakpoints: {
     mobile: "768px",
-    mini: "768px", //테블릿 미니
+    mini: "670px", //테블릿 미니
     tablet: "1024px",
     desktop: "1280px",
     wide: "1536px",

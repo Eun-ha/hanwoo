@@ -22,17 +22,25 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
 
   const styles = css`
     visibility: ${isOpen ? "visible" : "hidden"};
-    //margin: 15px 0;
-    padding: 0 15px;
     padding: 20% 5% 0;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     color: ${theme.colors.white.text};
     z-index: 2;
-    background-color: ${theme.colors.text};
+    background-image: url("/images/mobile/nav-bg.png"),
+      linear-gradient(
+        180deg,
+        rgba(39, 27, 41, 1) 0%,
+        rgba(39, 27, 41, 1) 15%,
+        rgba(198, 66, 83, 1) 60%,
+        rgba(255, 157, 132, 1) 100%
+      );
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 
     h2 {
       padding-bottom: 15px;
@@ -76,13 +84,13 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
       display: none;
     }
 
-    @media (min-width: ${theme.breakpoints.desktop}) {
+    @media (min-width: ${theme.breakpoints.mini}) {
       display: flex;
       justify-content: space-around;
       z-index: 11;
       padding: 0;
       color: ${theme.colors.text};
-      background-color: ${theme.colors.background};
+      background: ${theme.colors.background};
 
       .wrapper {
         flex: 1;

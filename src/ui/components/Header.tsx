@@ -43,6 +43,7 @@ export default function Header() {
     background-color: ${isHovered
       ? `${theme.colors.background}`
       : "transparent"};
+
     h1 {
       width: 52px;
       height: 33px;
