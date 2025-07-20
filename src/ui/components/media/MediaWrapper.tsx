@@ -4,6 +4,7 @@ import { mediaTypes } from "../../../data/data";
 import MediaText from "../../animation/MediaText";
 import YouTubeEmbed from "./YoutubeEmbed";
 import { coverBg } from "../../../styles/common";
+import TwinklingStars from "../../animation/TwinklingStarts";
 
 type MediaWrapperProps = {
   data: mediaTypes[];
@@ -14,7 +15,6 @@ export default function MediaWrapper(props: MediaWrapperProps) {
   const theme = useTheme();
 
   const styles = css`
-    //padding-bottom: 161px;
     width: 100%;
     height: 100%;
     position: relative;
@@ -41,6 +41,7 @@ export default function MediaWrapper(props: MediaWrapperProps) {
   return (
     <div css={styles}>
       <MediaText />
+      <TwinklingStars />
       {media.map((item, index) => (
         <YouTubeEmbed data={item} key={index} />
       ))}
