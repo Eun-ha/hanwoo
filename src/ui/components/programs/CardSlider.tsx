@@ -17,8 +17,9 @@ export default function CardSlider(props: CardSliderProps) {
 
   const swiperStyle = css`
     padding-top: 25px;
+    //background-color: aquamarine;
     .swiper-slide {
-      flex-shrink: 1;
+      //flex-shrink: 1;
     }
     .swiper-button-next,
     .swiper-button-prev {
@@ -60,14 +61,15 @@ export default function CardSlider(props: CardSliderProps) {
     <Swiper
       modules={[Navigation]}
       navigation
-      spaceBetween={34}
-      slidesPerView={1} // 기본값 (모바일 기준)
+      //spaceBetween={34}
+      loop={true}
+      slidesPerView={1.5} // 기본값 (모바일 기준)
       breakpoints={{
         640: {
-          slidesPerView: 2, // 작은 태블릿
+          slidesPerView: 3, // 작은 태블릿
         },
         768: {
-          slidesPerView: 2, // 일반 태블릿
+          slidesPerView: 3, // 일반 태블릿
         },
         1024: {
           slidesPerView: 3, // 데스크탑
