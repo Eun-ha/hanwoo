@@ -45,6 +45,12 @@ export default function GlobalStyles() {
         .swiper {
           position: initial;
         }
+        .swiper-wrapper {
+          padding-left: 18px;
+          @media (min-width: ${theme.breakpoints.desktop}) {
+            padding: 0 0;
+          }
+        }
       `}
     />
   );

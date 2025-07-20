@@ -22,11 +22,11 @@ const LinkCharacters = () => {
       mHeight: 17.74,
       width: 20,
       height: 31.54,
-      left: 15,
+      left: 13,
       right: "inherit",
       top: "inherit",
       bottom: 24,
-      duration: 4,
+      duration: 2,
     },
     {
       name: "character03",
@@ -62,7 +62,7 @@ const LinkCharacters = () => {
       right: "inherit",
       top: 8,
       bottom: "inherit",
-      duration: 2.5,
+      duration: 1.5,
     },
     {
       name: "character06",
@@ -74,7 +74,7 @@ const LinkCharacters = () => {
       right: "inherit",
       top: 10,
       bottom: "inherit",
-      duration: 1.5,
+      duration: 1.1,
     },
   ];
 
@@ -115,8 +115,10 @@ const LinkCharacters = () => {
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
-    animation: ${name !== "character04" ? rotate : floatUpDown} ${duration}s
-      linear infinite;
+    animation: ${!["character04", "character05", "character06"].includes(name)
+        ? rotate
+        : floatUpDown}
+      ${duration}s linear infinite;
 
     @media (min-width: ${theme.breakpoints.tablet}) {
       width: ${typeof width === "number" ? `${width}px` : width};

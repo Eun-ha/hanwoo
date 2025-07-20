@@ -19,7 +19,11 @@ export default function CardSlider(props: CardSliderProps) {
     padding-top: 25px;
     //background-color: aquamarine;
     .swiper-slide {
-      //flex-shrink: 1;
+      /*flex-shrink: 1;
+      margin-left: 22px;
+      &:nth-of-type(1) {
+        margin-left: 0;
+      }*/
     }
     .swiper-button-next,
     .swiper-button-prev {
@@ -28,6 +32,9 @@ export default function CardSlider(props: CardSliderProps) {
 
     @media (min-width: ${theme.breakpoints.tablet}) {
       padding-top: 87px;
+      .swiper-slide {
+        //margin-left: 29px;
+      }
       .swiper-button-next,
       .swiper-button-prev {
         display: block;
@@ -62,7 +69,7 @@ export default function CardSlider(props: CardSliderProps) {
       modules={[Navigation]}
       navigation
       //spaceBetween={34}
-      loop={true}
+      //loop={true}
       slidesPerView={1.5} // 기본값 (모바일 기준)
       breakpoints={{
         640: {
