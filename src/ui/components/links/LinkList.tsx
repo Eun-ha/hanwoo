@@ -22,7 +22,7 @@ export default function LinkList(props: LinkListProps) {
     }
 
     @media (min-width: ${theme.breakpoints.desktop}) {
-      padding: 0;
+      padding: 50px 0 80px 0;
       flex-wrap: nowrap;
       align-items: anchor-center;
     }

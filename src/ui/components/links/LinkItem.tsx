@@ -71,19 +71,19 @@ export default function LinkItem(props: LinkItemProps) {
         height: 306px;
       }
       &:nth-of-type(1) {
-        margin-top: 108px;
+        //margin-top: 88px;
       }
       &:nth-of-type(2) {
-        margin: 303px 0 0 30px;
+        margin: 163px 20px 0;
       }
       &:nth-of-type(3) {
-        margin-top: 35px;
+        //margin-top: 15px;
       }
       &:nth-of-type(4) {
-        margin: 232px 20px 0 0;
+        margin: 92px 20px 0;
       }
       &:nth-of-type(5) {
-        margin-top: 62px;
+        //margin-top: 22px;
       }
     }
   `;
