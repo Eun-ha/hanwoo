@@ -15,14 +15,10 @@ export default function LinkList(props: LinkListProps) {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    padding: 39px 0;
-
-    @media (min-width: ${theme.breakpoints.mini}) {
-      padding: 75px 0;
-    }
+    padding: 100px 0;
 
     @media (min-width: ${theme.breakpoints.desktop}) {
-      padding: 50px 0 80px 0;
+      padding: 50px 0;
       flex-wrap: nowrap;
       align-items: anchor-center;
     }
