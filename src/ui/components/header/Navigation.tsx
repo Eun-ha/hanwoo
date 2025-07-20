@@ -45,7 +45,8 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
     h2 {
       padding-bottom: 15px;
       margin: 0 0 15px 0;
-      border-bottom: 1px solid ${theme.colors.white.text};
+      border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+      font-size: 21.97px;
       cursor: pointer;
     }
     ul {
