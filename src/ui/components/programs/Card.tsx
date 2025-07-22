@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css, useTheme } from "@emotion/react";
 import { programsTypes } from "../../../data/data";
-import { ellipsisTwoLines } from "../../../styles/common";
+import { ellipsisLines } from "../../../styles/common";
 
 type CardProps = {
   data: programsTypes;
@@ -76,7 +76,7 @@ export default function Card(props: CardProps) {
     p {
       margin-top: 25px;
       font-size: 14px;
-      ${ellipsisTwoLines}
+      ${ellipsisLines(2)}
     }
 
     @media (min-width: ${theme.breakpoints.tablet}) {

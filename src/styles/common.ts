@@ -13,14 +13,14 @@ export const ellipsis = css`
   white-space: nowrap;
 `;
 
-export const ellipsisTwoLines = css`
+export const ellipsisLines = (lineCount: number) => css`
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: ${lineCount};
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.5;
-  max-height: calc(1.5em * 2); /* 줄 수 × line-height */
+  max-height: calc(1.5em * ${lineCount});
 `;
 
 export const coverBg = css`
