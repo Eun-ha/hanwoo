@@ -74,13 +74,13 @@ export const AllData: AllDataTypes[] = [
         date: "2024-06-07",
         content:
           "[공고] 제20회 횡성한우축제 공간조성 및 운영 용역 우선협상자 선정결과 공고",
-        url: "www.naver.com",
+        url: "",
       },
       {
         date: "2024-06-07",
         content:
           "[공고]제20회 횡성한우축제 운영대행 용역 우선협상대상자 선정결과 공고",
-        url: "www.naver.com",
+        url: "",
       },
     ],
     programs: [
@@ -90,7 +90,7 @@ export const AllData: AllDataTypes[] = [
         content:
           "주제관을 따라 걸으면 횡성한우의 과거, 현재, 미래를 만날 수 있는 지붕없는 박물관",
         image: "/images/programs/programs.png",
-        url: "www.naver.com",
+        url: "",
       },
       {
         title: "횡성한우",
@@ -98,21 +98,21 @@ export const AllData: AllDataTypes[] = [
         content:
           "최고의 맛 횡성한우를 즐기면서 함께 추억속으로 빠지는 음악여행",
         image: "/images/programs/programs2.png",
-        url: "www.naver.com",
+        url: "",
       },
       {
         title: "횡성한우",
         title2: "웰니스파티",
         content: "지역주민과 관광객이 함께하는 참여형 피트니스 파티",
         image: "/images/programs/programs.png",
-        url: "www.naver.com",
+        url: "",
       },
       {
         title: "횡성한우 ",
         title2: "카우쇼",
         content: "지역예술가들과 함께하는 횡성한우 공공미술 프로젝트",
         image: "/images/programs/programs2.png",
-        url: "www.naver.com",
+        url: "",
       },
       {
         title: "횡성한우 ",
@@ -120,7 +120,7 @@ export const AllData: AllDataTypes[] = [
         content:
           "주제관을 따라 걸으면 횡성한우의 과거, 현재, 미래를 만날 수 있는 지붕없는 박물관",
         image: "/images/programs/programs.png",
-        url: "www.naver.com",
+        url: "",
       },
       {
         title: "횡성한우",
@@ -128,47 +128,48 @@ export const AllData: AllDataTypes[] = [
         content:
           "최고의 맛 횡성한우를 즐기면서 함께 추억속으로 빠지는 음악여행",
         image: "/images/programs/programs2.png",
-        url: "www.naver.com",
+        url: "",
       },
       {
         title: "횡성한우",
         title2: "웰니스파티",
         content: "지역주민과 관광객이 함께하는 참여형 피트니스 파티",
         image: "/images/programs/programs.png",
+        url: "",
       },
       {
         title: "횡성한우 ",
         title2: "카우쇼",
         content: "지역예술가들과 함께하는 횡성한우 공공미술 프로젝트",
         image: "/images/programs/programs2.png",
-        url: "www.naver.com",
+        url: "",
       },
     ],
     links: [
       {
         title: "축제소개",
         icon: "intro",
-        url: "www.naver.com",
+        url: "",
       },
       {
         title: "축제일정",
         icon: "schedule",
-        url: "www.naver.com",
+        url: "",
       },
       {
         title: "행사장안내",
         icon: "map",
-        url: "www.naver.com",
+        url: "",
       },
       {
         title: "오시는길",
         icon: "location",
-        url: "www.naver.com",
+        url: "",
       },
       {
         title: "한우이야기",
         icon: "story",
-        url: "www.naver.com",
+        url: "",
       },
     ],
     media: [
