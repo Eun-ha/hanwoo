@@ -38,7 +38,7 @@ export default function NoticeItem(props: NoticeItemProps) {
         display: inline-block;
         margin-top: 0;
         flex-shrink: 0;
-        width: 113px;
+        width: 123px;
       }
     }
   `;
