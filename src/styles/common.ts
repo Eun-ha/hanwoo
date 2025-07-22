@@ -13,6 +13,16 @@ export const ellipsis = css`
   white-space: nowrap;
 `;
 
+export const ellipsisTwoLines = css`
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  max-height: calc(1.5em * 2); /* 줄 수 × line-height */
+`;
+
 export const coverBg = css`
   display: block;
   content: "";
