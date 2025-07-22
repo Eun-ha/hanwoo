@@ -68,21 +68,25 @@ export default function CardSlider(props: CardSliderProps) {
     <Swiper
       modules={[Navigation]}
       navigation
-      //spaceBetween={34}
+      spaceBetween={16}
       //loop={true}
       slidesPerView={1.5} // 기본값 (모바일 기준)
       breakpoints={{
         640: {
           slidesPerView: 3, // 작은 태블릿
+          spaceBetween: 20,
         },
         768: {
           slidesPerView: 3, // 일반 태블릿
+          spaceBetween: 24,
         },
         1024: {
           slidesPerView: 3, // 데스크탑
+          spaceBetween: 32,
         },
         1440: {
           slidesPerView: 4, // 대형 데스크탑
+          spaceBetween: 40,
         },
       }}
       css={swiperStyle}
