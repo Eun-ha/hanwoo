@@ -16,6 +16,15 @@ export default function Media(props: MediaProps) {
   const styles = css`
     margin-top: 60px;
     overflow: hidden;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(255, 255, 255, 1) 40%,
+      rgba(255, 255, 255, 1) 60%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 1) 100%
+    );
 
     @media (min-width: ${theme.breakpoints.tablet}) {
       margin-top: 106px;

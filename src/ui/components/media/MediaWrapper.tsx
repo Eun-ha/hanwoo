@@ -25,7 +25,7 @@ export default function MediaWrapper(props: MediaWrapperProps) {
       background: url("/images/mobile/media-bg.png");
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 100% 100%;
+      background-size: cover;
     }
 
     @media (min-width: ${theme.breakpoints.mini}) {
