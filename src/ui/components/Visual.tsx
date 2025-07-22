@@ -48,10 +48,13 @@ export default function Visual(props: VisualProps) {
     }
 
     @media (min-width: ${theme.breakpoints.tablet}) {
-      background: url("/images/pc/visual-bg.png");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
+      background: linear-gradient(
+        180deg,
+        rgba(39, 27, 41, 1) 0%,
+        rgba(39, 27, 41, 1) 15%,
+        rgba(198, 66, 83, 1) 60%,
+        rgba(255, 157, 132, 1) 100%
+      );
 
       h2 {
         padding-top: 216px;
