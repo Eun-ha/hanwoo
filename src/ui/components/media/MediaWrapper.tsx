@@ -19,9 +19,19 @@ export default function MediaWrapper(props: MediaWrapperProps) {
     position: relative;
     overflow: hidden;
     margin-top: 25px;
+    padding-bottom: 70px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 157, 132, 1) 35%,
+      rgba(229, 74, 91, 1) 55%,
+      rgba(39, 27, 41, 1) 84%,
+      rgba(39, 27, 41, 1) 100%
+    );
 
     @media (min-width: ${theme.breakpoints.mini}) {
       margin-top: 56px;
+      padding-bottom: 100px;
     }
   `;
   return (

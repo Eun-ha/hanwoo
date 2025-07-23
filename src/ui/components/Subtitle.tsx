@@ -23,6 +23,7 @@ export default function Subtitle(props: SubtitleProps) {
         color: ${theme.colors.point};
       }
       p {
+        margin-bottom: 10px;
         font-weight: normal;
       }
       strong,
