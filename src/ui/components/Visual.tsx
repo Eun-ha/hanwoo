@@ -19,6 +19,7 @@ export default function Visual(props: VisualProps) {
     height: 100vh;
     color: ${theme.colors.white.text};
     text-align: center;
+    z-index: 0;
 
     background: url("/images/mobile/visual-bg.png");
     background-position: center center;
@@ -47,15 +48,9 @@ export default function Visual(props: VisualProps) {
       font-size: 16px;
     }
 
-    @media (min-width: ${theme.breakpoints.tablet}) {
-      background: linear-gradient(
-        180deg,
-        rgba(39, 27, 41, 1) 0%,
-        rgba(39, 27, 41, 1) 15%,
-        rgba(198, 66, 83, 1) 60%,
-        rgba(255, 157, 132, 1) 100%
-      );
-
+    @media (min-width: ${theme.breakpoints.mini}) {
+      height: 1050px;
+      background: ${theme.colors.white.text};
       h2 {
         padding-top: 216px;
         font-size: 60px;
@@ -73,16 +68,33 @@ export default function Visual(props: VisualProps) {
       &::before {
         display: block;
         content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
         width: 100%;
-        height: 12vh;
-        background: ${theme.colors.white.text};
+        height: 90%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background: linear-gradient(
+          180deg,
+          rgba(39, 27, 41, 1) 0%,
+          rgba(39, 27, 41, 1) 15%,
+          rgba(198, 66, 83, 1) 60%,
+          rgba(255, 157, 132, 1) 100%
+        );
+      }
+      @media (min-width: ${theme.breakpoints.tablet}) {
+        &::before {
+          height: 85%;
+        }
       }
       @media (min-width: ${theme.breakpoints.desktop}) {
         &::before {
-          height: 18.5vh;
+          height: 80%;
+        }
+      }
+      @media (min-width: ${theme.breakpoints.wide}) {
+        &::before {
+          height: 75%;
         }
       }
     }

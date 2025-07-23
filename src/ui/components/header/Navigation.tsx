@@ -69,14 +69,15 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover;
-          transform: scaleX(0);
-          transform-origin: left;
-          transition: transform 0.4s ease;
+          transform: translateX(-100%);
+          opacity: 0;
+          transition: transform 0.5s ease, opacity 0.5s ease;
         }
         &:hover {
           font-weight: bold;
           &::after {
-            transform: scaleX(1);
+            transform: translateX(0);
+            opacity: 1;
           }
         }
       }
@@ -103,7 +104,7 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
           background-color: ${theme.colors.point};
           transition: background-color 0.5s ease;
           h2:after {
-            transform: scaleX(1);
+            clip-path: inset(0 0 0 0); /* 전체 보이기 */
           }
         }
         h2 {
@@ -118,10 +119,9 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
             bottom: 0;
             height: 1px;
             width: 100%;
-            background-color: ${theme.colors.white.text};
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.5s ease;
+            background: ${theme.colors.white.text};
+            clip-path: inset(0 100% 0 0); /* 왼쪽 0, 오른쪽 100%로 숨김 */
+            transition: clip-path 0.5s ease;
           }
         }
         ul {
