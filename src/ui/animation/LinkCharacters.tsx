@@ -6,75 +6,92 @@ const LinkCharacters = () => {
   const characters = [
     {
       name: "character01",
-      mWidth: 58.81,
-      mHeight: 47.7,
-      width: 104.573,
-      height: 84.821,
-      left: 5,
+      width: 105,
+      height: 150,
+      left: 17,
       right: "inherit",
       top: "inherit",
-      bottom: 15,
+      bottom: 5,
+
       duration: 3,
+      display: true,
     },
     {
       name: "character02",
-      mWidth: 11.25,
-      mHeight: 17.74,
-      width: 20,
-      height: 31.54,
-      left: 13,
+      width: 128,
+      height: 82,
+      left: 11,
       right: "inherit",
-      top: "inherit",
-      bottom: 24,
-      duration: 2,
+      top: 11.3,
+      bottom: "inherit",
+      duration: "none",
+      display: true,
     },
     {
       name: "character03",
-      mWidth: 60.09,
-      mHeight: 63.79,
-      width: 106.85,
-      height: 113.44,
-      left: "inherit",
-      right: 22,
-      top: 1,
+      width: 107,
+      height: 113,
+      left: 63,
+      right: "inherit",
+      top: 20,
       bottom: "inherit",
       duration: 2,
+      display: true,
     },
     {
       name: "character04",
-      mWidth: 21.17,
-      mHeight: 46.13,
-      width: 37.64,
-      height: 82.03,
-      left: "inherit",
-      right: 10,
+      width: 38,
+      height: 82,
+      left: 50,
+      right: "inherit",
       top: "inherit",
-      bottom: 15,
+      bottom: 10,
       duration: 1,
+      display: true,
     },
     {
       name: "character05",
-      mWidth: 11.29,
-      mHeight: 13.19,
-      width: 25.52,
-      height: 29.82,
-      left: 5,
+      width: 69,
+      height: 50,
+      left: 30,
       right: "inherit",
-      top: 8,
+      top: 20,
       bottom: "inherit",
       duration: 1.5,
+      display: false,
     },
     {
       name: "character06",
-      mWidth: 11.25,
-      mHeight: 17.74,
-      width: 26.2,
-      height: 41.31,
-      left: 8,
+      width: 137,
+      height: 116,
+      left: 2.6,
       right: "inherit",
-      top: 10,
+      top: 50,
       bottom: "inherit",
-      duration: 1.1,
+      duration: "none",
+      display: false,
+    },
+    {
+      name: "character07",
+      width: 99,
+      height: 71,
+      left: "inherit",
+      right: 19,
+      top: "inherit",
+      bottom: 20,
+      duration: "none",
+      display: false,
+    },
+    {
+      name: "character08",
+      width: 136,
+      height: 124,
+      left: "inherit",
+      right: 3,
+      top: 50,
+      bottom: "inherit",
+      duration: "none",
+      display: false,
     },
   ];
 
@@ -82,47 +99,50 @@ const LinkCharacters = () => {
 
   const characterStyle = ({
     name,
-    mWidth,
-    mHeight,
     width,
     height,
-    left = "auto",
-    right = "auto",
-    top = "auto",
-    bottom = "auto",
+    left,
+    right,
+    top,
+    bottom,
     duration,
+    display,
   }: {
     name: string;
-    mWidth: number | string;
-    mHeight: number | string;
     width: number | string;
     height: number | string;
     left: number | string;
     right: number | string;
     top: number | string;
     bottom: number | string;
-    duration: number;
+    duration: number | string;
+    display: boolean;
   }) => css`
-    display: block;
+    display: ${display === true ? "block" : "none"};
     position: absolute;
     left: ${left}%;
     right: ${right}%;
     top: ${top}%;
     bottom: ${bottom}%;
-    width: ${typeof mWidth === "number" ? `${mWidth}px` : mWidth};
-    height: ${typeof mHeight === "number" ? `${mHeight}px` : mHeight};
-    background: url("/images/links/${name}.png");
+    width: ${width}px;
+    height: ${height}px;
+    background: url("/images/links/${name}.svg");
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
-    animation: ${!["character04", "character05", "character06"].includes(name)
+    animation: ${duration === "none"
+        ? "none"
+        : !["character04"].includes(name)
         ? rotate
         : floatUpDown}
       ${duration}s linear infinite;
 
     @media (min-width: ${theme.breakpoints.tablet}) {
-      width: ${typeof width === "number" ? `${width}px` : width};
-      height: ${typeof height === "number" ? `${height}px` : height};
+      //width: ${typeof width === "number" ? `${width}px` : width};
+      //height: ${typeof height === "number" ? `${height}px` : height};
+    }
+    @media (min-width: ${theme.breakpoints.desktop}) {
+      display: block;
     }
   `;
 
