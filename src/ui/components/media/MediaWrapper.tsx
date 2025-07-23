@@ -3,7 +3,6 @@ import { css, useTheme } from "@emotion/react";
 import { mediaTypes } from "../../../data/data";
 import MediaText from "../../animation/MediaText";
 import YouTubeEmbed from "./YoutubeEmbed";
-import { coverBg } from "../../../styles/common";
 import TwinklingStars from "../../animation/TwinklingStarts";
 
 type MediaWrapperProps = {
@@ -20,22 +19,9 @@ export default function MediaWrapper(props: MediaWrapperProps) {
     position: relative;
     overflow: hidden;
     margin-top: 25px;
-    &::before {
-      ${coverBg};
-      background: url("/images/mobile/media-bg.png");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-    }
 
     @media (min-width: ${theme.breakpoints.mini}) {
       margin-top: 56px;
-      &::before {
-        background: url("/images/pc/media-bg.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-      }
     }
   `;
   return (
