@@ -133,7 +133,7 @@ const MediaText = () => {
         <g
           id="마스크_그룹_5_copy"
           data-name="마스크 그룹 5 copy"
-          transform="translate(410.131 0)"
+          transform="translate(450.131 0)"
         >
           <g
             id="그룹_34174"
