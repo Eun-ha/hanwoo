@@ -11,10 +11,13 @@ export default function Footer() {
   } = FooterData;
   const theme = useTheme();
   const styles = css`
-    padding: 50px 18px 60px;
-    font-size: 13px;
-    color: ${theme.colors.white.text};
     background-color: ${theme.colors.block.background};
+    .wrapper {
+      padding: 50px 18px 60px;
+      font-size: 13px;
+      color: ${theme.colors.white.text};
+    }
+
     h4 {
       width: 107px;
       height: 51px;
@@ -36,36 +39,49 @@ export default function Footer() {
     }
     .address {
       flex-shrink: 1;
+      p {
+        line-height: 1.625;
+        span {
+          display: inline-block;
+          padding-left: 15px;
+          &:nth-of-type(1) {
+            padding-left: 0;
+          }
+        }
+      }
     }
     .social {
-      min-width: 58px;
+      min-width: 70px;
       a {
         ${VeilText}
         display: inline-block;
-        margin-left: 15px;
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+        background: url("/images/footer/youtube.svg");
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: cover;
         &:nth-of-type(1) {
           margin-left: 0;
-          width: 20px;
-          height: 20px;
-          background: url("/images/footer/instagram.svg");
-          background-repeat: no-repeat;
-          background-position: left top;
-          background-size: cover;
         }
         &:nth-of-type(2) {
-          width: 23px;
-          height: 17px;
-          background: url("/images/footer/youtube.svg");
+          background: url("/images/footer/instagram.svg");
           background-repeat: no-repeat;
           background-position: left top;
           background-size: cover;
         }
       }
     }
-    @media (min-width: ${theme.breakpoints.desktop}) {
-      display: flex;
-      padding: 83px 320px 91px;
-      font-size: 16px;
+
+    @media (min-width: ${theme.breakpoints.tablet}) {
+      .wrapper {
+        display: flex;
+        max-width: 1362px;
+        margin: 0 auto;
+        padding: 85px 50px 100px;
+        font-size: 16px;
+      }
 
       h4 {
         width: 242px;
@@ -82,25 +98,39 @@ export default function Footer() {
       }
       .info {
         flex-grow: 1;
+        padding-top: 0;
+      }
+      .social {
+        a {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+    @media (min-width: ${theme.breakpoints.desktop}) {
+      .wrapper {
+        padding: 85px 0 100px;
       }
     }
   `;
   return (
     <footer css={styles}>
-      <h4>{organizationName}</h4>
-      <div className="info">
-        <div className="address">
-          <h5>{organizationName}</h5>
-          <p>
-            <span>대표자: {representativeName}</span>
-            <span>문의전화: {contactPhone}</span>
-          </p>
-          <p>{address}</p>
-          <p>{copyright}</p>
-        </div>
-        <div className="social">
-          {youtube && <a href={youtube}>YouTube</a>}
-          {instagram && <a href={instagram}>Instagram</a>}
+      <div className="wrapper">
+        <h4>{organizationName}</h4>
+        <div className="info">
+          <div className="address">
+            <h5>{organizationName}</h5>
+            <p>
+              <span>대표자: {representativeName}</span>
+              <span>문의전화: {contactPhone}</span>
+            </p>
+            <p>{address}</p>
+            <p>{copyright}</p>
+          </div>
+          <div className="social">
+            {youtube && <a href={youtube}>YouTube</a>}
+            {instagram && <a href={instagram}>Instagram</a>}
+          </div>
         </div>
       </div>
     </footer>
