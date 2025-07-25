@@ -48,21 +48,6 @@ export default function LinkItem(props: LinkItemProps) {
         width: 306px;
         height: 306px;
       }
-      &:nth-of-type(1) {
-        //margin-top: 188px;
-      }
-      &:nth-of-type(2) {
-        // margin: 353px 0 0 65px;
-      }
-      &:nth-of-type(3) {
-        //margin-top: 35px;
-      }
-      &:nth-of-type(4) {
-        //margin: 322px 72px 0 0;
-      }
-      &:nth-of-type(5) {
-        //margin-top: 142px;
-      }
     }
 
     @media (min-width: ${theme.breakpoints.desktop}) {
@@ -71,13 +56,13 @@ export default function LinkItem(props: LinkItemProps) {
         height: 306px;
       }
       &:nth-of-type(1) {
-        //margin-top: 88px;
+        //margin-top: -100px;
       }
       &:nth-of-type(2) {
         margin: 203px 20px 0;
       }
       &:nth-of-type(3) {
-        //margin-top: 15px;
+        margin-top: -100px;
       }
       &:nth-of-type(4) {
         margin: 122px 20px 0;
