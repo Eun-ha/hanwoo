@@ -18,7 +18,7 @@ export default function LinkList(props: LinkListProps) {
     padding: 100px 0;
 
     @media (min-width: ${theme.breakpoints.desktop}) {
-      padding: 50px 0;
+      //padding: 50px 0;
       flex-wrap: nowrap;
       align-items: anchor-center;
     }

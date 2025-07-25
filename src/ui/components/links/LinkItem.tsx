@@ -74,13 +74,13 @@ export default function LinkItem(props: LinkItemProps) {
         //margin-top: 88px;
       }
       &:nth-of-type(2) {
-        margin: 163px 20px 0;
+        margin: 203px 20px 0;
       }
       &:nth-of-type(3) {
         //margin-top: 15px;
       }
       &:nth-of-type(4) {
-        margin: 92px 20px 0;
+        margin: 122px 20px 0;
       }
       &:nth-of-type(5) {
         //margin-top: 22px;
