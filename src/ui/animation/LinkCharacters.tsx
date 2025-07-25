@@ -12,7 +12,10 @@ const LinkCharacters = () => {
       right: "inherit",
       top: "inherit",
       bottom: 5,
-
+      mleft: 7,
+      mright: "inherit",
+      mtop: "inherit",
+      mbottom: 5,
       duration: 3,
       display: true,
     },
@@ -24,6 +27,10 @@ const LinkCharacters = () => {
       right: "inherit",
       top: 11.3,
       bottom: "inherit",
+      mleft: 3,
+      mright: "inherit",
+      mtop: 5,
+      mbottom: "inherit",
       duration: "none",
       display: true,
     },
@@ -35,6 +42,10 @@ const LinkCharacters = () => {
       right: "inherit",
       top: 20,
       bottom: "inherit",
+      mleft: "inherit",
+      mright: 3,
+      mtop: 4,
+      mbottom: "inherit",
       duration: 2,
       display: true,
     },
@@ -46,6 +57,10 @@ const LinkCharacters = () => {
       right: "inherit",
       top: "inherit",
       bottom: 10,
+      mleft: "inherit",
+      mright: 7,
+      mtop: "inherit",
+      mbottom: 5,
       duration: 1,
       display: true,
     },
@@ -105,6 +120,10 @@ const LinkCharacters = () => {
     right,
     top,
     bottom,
+    mleft,
+    mright,
+    mtop,
+    mbottom,
     duration,
     display,
   }: {
@@ -115,17 +134,21 @@ const LinkCharacters = () => {
     right: number | string;
     top: number | string;
     bottom: number | string;
+    mleft?: number | string;
+    mright?: number | string;
+    mtop?: number | string;
+    mbottom?: number | string;
     duration: number | string;
     display: boolean;
   }) => css`
     display: ${display === true ? "block" : "none"};
     position: absolute;
-    left: ${left}%;
-    right: ${right}%;
-    top: ${top}%;
-    bottom: ${bottom}%;
-    width: ${width}px;
-    height: ${height}px;
+    left: ${mleft}%;
+    right: ${mright}%;
+    top: ${mtop}%;
+    bottom: ${mbottom}%;
+    width: calc(${width}px / 1.5);
+    height: calc(${height}px / 1.5);
     background: url("/images/links/${name}.svg");
     background-repeat: no-repeat;
     background-position: left top;
@@ -143,6 +166,12 @@ const LinkCharacters = () => {
     }
     @media (min-width: ${theme.breakpoints.desktop}) {
       display: block;
+      width: ${width}px;
+      height: ${height}px;
+      left: ${left}%;
+      right: ${right}%;
+      top: ${top}%;
+      bottom: ${bottom}%;
     }
   `;
 

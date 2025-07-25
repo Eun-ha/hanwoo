@@ -38,8 +38,8 @@ export default function Links(props: LinksProps) {
   `;
   return (
     <div css={styles}>
-      <LinkList data={links} />
       <LinkCharacters />
+      <LinkList data={links} />
     </div>
   );
 }
