@@ -16,6 +16,7 @@ export default function CardSlider(props: CardSliderProps) {
   const theme = useTheme();
 
   const swiperStyle = css`
+    //position: relative;
     padding-top: 25px;
     //background-color: aquamarine;
     .swiper-slide {

@@ -15,17 +15,31 @@ export default function Card(props: CardProps) {
     position: relative;
     overflow: hidden;
     z-index: 0;
-    padding: 153px 33px 0;
+    //padding: 153px 33px 0;
+    /*
     background: url(${image});
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    */
     border-radius: 20px;
-
     width: 234px;
     height: 326px;
 
     transition: transform 0.4s ease;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .contents {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 153px 33px 0;
+    }
 
     &::before {
       display: block;
@@ -33,7 +47,7 @@ export default function Card(props: CardProps) {
       position: absolute;
       bottom: 0;
       left: 0;
-      z-index: -1;
+      //z-index: -1;
       width: 100%;
       height: 100%;
       background-color: ${theme.colors.background};
@@ -80,9 +94,15 @@ export default function Card(props: CardProps) {
     }
 
     @media (min-width: ${theme.breakpoints.tablet}) {
-      padding: 235px 51px 0;
+      //padding: 235px 51px 0;
       width: 360px;
       height: 503px;
+      .contents {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 235px 51px 0;
+      }
       h4 {
         font-size: 36px;
       }
@@ -99,7 +119,8 @@ export default function Card(props: CardProps) {
   `;
   return (
     <a href={url?.startsWith("http") ? url : `https://${url}`} css={styles}>
-      <div>
+      <img src={image} alt={content} />
+      <div className="contents">
         <h4>
           <span>{title}</span>
           <br />
